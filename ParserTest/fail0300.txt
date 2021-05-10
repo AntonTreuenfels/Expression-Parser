@@ -1,0 +1,16 @@
+# Parser 3.00 - Fail Tests
+
+# below the minimum possible value
+
+-2500000000 + -2500000000
+-0xffffffff + -2
+-200+-0xffffffff
+
+# above the maximum possible value
+
+0xffffffff + --1
+--0x80000000 + --0xc0000000
+
+# negate the minimum value
+
+-4294967296

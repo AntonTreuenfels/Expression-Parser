@@ -1,0 +1,23 @@
+# Parser 9.10 - Pass Tests
+
+# no assignment (default value)
+
+a
+b
+c
+
+# single assigment
+
+a = 1
+b = 2
+c = a+b
+a
+b
+c
+
+# multiple assignment
+
+a = b = c
+a
+b
+c

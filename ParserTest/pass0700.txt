@@ -1,0 +1,57 @@
+# Parser 7.00 - Successful Tests
+
+# logical negation
+
+!0
+!1
+!(100-100)
+!(0x100-0x80)
+
+# equality
+
+0==0
+0==1
+0x10 == (0x10 + 0)
+(0x80 + 0x20) == 0xC0
+
+# inequality
+
+100 != 100
+100 != 200
+0x20 != (0x10 + 0x10)
+(0x80 - 0x40) != 0x20
+
+# double logical negation
+# - zero stays zero, non-zero becomes one
+
+!!0
+!!(1+1)
+
+# consecutive
+# - note these are parsed as (A logop B) logop C
+# - the result of (A logop B)  is actually 0 (False) or 1 (True)
+# - which makes it comparable:
+# - result logop C
+# - works as expected
+
+0 == 0 == 0
+0 == 0 != 0
+0 != 0 == 0
+0 != 0 != 0
+
+1 == 1 == 1
+1 == 1 != 1
+1 != 1 == 1
+1 != 1 != 1
+
+54 == 54 == 54
+54 == 54 != 54
+54 != 54 == 0
+54 == 54 == 1
+
+# however note that Python itself parses
+# A logop B logop C
+# as
+# (A logop B) and (B logop C)
+# - which gives entirely different results
+

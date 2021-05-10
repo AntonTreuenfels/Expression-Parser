@@ -1,0 +1,60 @@
+# Parser 12.00 - Pass Tests
+
+# some variables
+
+t = 1
+f = 0
+
+# AND tests
+
+t && t
+t && f
+f && t
+f && f
+t && t && t
+t && t && f
+t && f && t
+t && f && f
+f && t && t
+f && t && f
+f && f && t
+f && f && f
+t && (t && t)
+t && (t && f)
+t && (f && t)
+t && (f && f)
+f && (t && t)
+f && (t && f)
+f && (f && t)
+f && (f && f)
+
+# show that right branch is not evaluated
+
+f && (7 / 0)
+
+# OR tests
+
+t || t
+t || f
+f || t
+f || f
+t || t || t
+t || t || f
+t || f || t
+t || f || f
+f || t || t
+f || t || f
+f || f || t
+f || f || f
+t || (t || t)
+t || (t || f)
+t || (f || t)
+t || (f || f)
+f || (t || t)
+f || (t || f)
+f || (f || t)
+f || (f || f)
+
+# show that right branch is not evaluated
+
+t || (7 / 0)

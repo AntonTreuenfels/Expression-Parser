@@ -1,0 +1,13 @@
+# Parser 1.00  Fail Tests
+
+# non-decimal input
+
+_abc_
+$123
+987&654
+
+# out of range decimal input
+# - default 2^32 or greater
+
+4294967296
+4294967297

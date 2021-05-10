@@ -1,0 +1,14 @@
+# Parser 9.00 - Pass Tests
+
+# recognition of symbols
+# - all have value zero
+# - so can't test division!
+
+harold
+zenith + 1
+23 - apogee
+a * b
+a1 * b1
+
+yesterday + today + tomorrow
+tomorrow_ - today_ - yesterday_

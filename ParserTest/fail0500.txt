@@ -1,0 +1,51 @@
+# Parser 5.00 - Fail Tests
+
+# unmatched parentheses
+
+1 + ( 2 * 3
+1 + 2 ) * 3
+
+# nested parentheses
+
+( 10 - 5 * 2 + 12 / 2
+ 10 - 5 * 2 + 12 ) / 2
+( 10 - 5 * (2 + 12 ) / 2
+( (10 - 5) * 2 + 12) ) / 2
+
+# intMax:  4294967295
+# intMin: -4294967296
+
+# operations which cannot overflow
+# are commented out 
+
+# positive-positive range
+
+4294967295 + 1
+# 0 - 4294967295 : can't overflow
+4294967295 * 2
+# 4294967295 / 3 : can't overflow
+
+# positive-negative range
+
+# 0 + (0 - 4294967295) : can't overflow
+0 - (0 - 4294967295 - 1)
+2 * (0 - 4294967295 - 1)
+# 4294967295 / (0 - 2) : can't overflow
+
+# negative-positive range
+
+# (0 - 1) + 4294967295 : can't overflow
+(0 - 2) - 4294967295
+(0 - 2) * 4294967295
+# (0 - 4294967295) / 5 : can't overflow
+
+# negative-negative range
+
+(0 - 2) + (0 - 4294967295)
+# (0 - 1) - (0 - 4294967295 - 1) : can't overflow
+(0 - 2) * (0 - 4294967295)
+# (0 - 4294967295) / (0 - 2) : can't overflow
+
+
+
+

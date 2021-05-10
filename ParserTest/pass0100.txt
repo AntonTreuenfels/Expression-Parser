@@ -1,0 +1,23 @@
+# Parser 1.00 Successful Tests
+
+# unsigned decimal integers
+
+0
+1
+23
+456
+7890
+
+# leading zeros should have no effect
+
+00000000
+01
+0023
+000456
+00007890
+
+# max unsigned decimal integer value
+# default 2^32-1 = 4294967295
+
+4294967294
+4294967295

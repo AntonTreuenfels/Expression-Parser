@@ -1,0 +1,60 @@
+# Parser 8.00 - Fail Tests
+
+# malformed
+.
+98.a
+b.99
+abc.def
+1.2.3
+..45
+67..
+8..9
+.10.
+
+# out of range (total value)
+# - default max 2^32-1
+
+4294967295.000000001
+4294967295.9
+4294967296.
+4294967296.0
+
+# malformed
+
+0x98.g
+0xh.aa
+0xabc.xyz
+0x..ab
+0xbc..
+0xcd..ef
+0x.ab.
+
+# out of range
+
+0xFFFFFFFF.000000001
+0xFFFFFFFF.9
+0xFFFFFFFF.F
+0x100000000.
+0x100000000.0
+
+# subtraction: negative minus negative
+
+-0.5 -  (-4294967294.0 - 2.0)
+
+# multiplication
+
+2.5 * (0xFFFFFFFF/2)
+1006.1 * (0xffffffff/3)
+0x80000000 * -4.0
+-0x40000000.4 * -8.5
+
+# division
+
+1000 / 0.0000001
+2000 / -0.0000001
+0x80000000 / -.25
+-1 / -0.000000000001
+
+
+
+

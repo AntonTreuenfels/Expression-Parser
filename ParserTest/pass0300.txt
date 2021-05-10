@@ -1,0 +1,55 @@
+# Parser 3.00 - Successful Tests
+
+# one use
+
+-10
+-100
+-0x100
+
+# double use (must separate to avoid confusion later)
+
+- -10
+- -100
+- -0x100
+
+# in an expression
+
+1 + -1
+-2 + 2
+-3 + -3
+- -4 + -4
+ 
+-1 + -2 + -3 + -4
+
+# lft pos, rgt pos
+
+0x40000000 + 0x3fffffff
+
+# lft pos, rgt neg (cannot go out of range)
+
+0x40000000 +-0x3fffffff
+
+# lft neg, rgt pos (cannot go out of range)
+
+-0x40000000 + 0x3fffffff
+
+# lft neg, rgt neg
+
+-0X40000000 + -0X3FFFFFFF
+
+# negate the maximum positive value
+
+-4294967295
+
+# negate the minimum postive value
+
+-0
+
+# negate the maximum negative value
+
+- -1
+
+# create the minimum negative value
+# can't do this directly because max value parser will accept is 2**33-1
+
+-4294967295 + -1

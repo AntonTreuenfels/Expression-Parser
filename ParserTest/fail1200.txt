@@ -1,0 +1,9 @@
+# Parser 12.00 - Fail Tests
+
+# malformed logical short circuit
+
+1 &&
+&& 0
+
+1 ||
+|| 0

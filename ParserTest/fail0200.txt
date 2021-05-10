@@ -1,0 +1,19 @@
+# Parser 2.00 - Fail Tests
+
+# malformed expressions
+
++
+64 +
+1 + 2 +
+36       21
+36 abc 21
+
+# out of range results
+# - default 2^32 or greater
+
+4294967295 +100
+4000000000 + 1000000000
+
+0xffffffff+1
+0X80000000 + 0X80000000
+0X80000000 + 0x80000000 + 1

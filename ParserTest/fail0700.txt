@@ -1,0 +1,25 @@
+# Parser 7.00 - Fail Tests
+
+# incomplete expressions
+
+==
+!=
+!
+
+54==
+72!=
+83!
+
+==36
+
+!=42
+
+# malformed expressions
+
+123 0x10 == 67
+1 == 2 4 != 9
+
+# multiple use
+
+6 == != 7
+!2!3

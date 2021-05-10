@@ -1,0 +1,13 @@
+# Parser 1.10- Fail Tests
+
+# non-hexadecimal input
+
+123H
+987#654
+'a single-quote delimited string'
+
+# out of range input
+# - default 2^32 or greater
+
+0x100000000
+0X100000001

@@ -1,0 +1,31 @@
+# Parser 9.30 - Pass Tests
+
+# starting from zero
+
+++a
+--b
+c++
+d--
+
+# near limits
+
+a = 4294967294
+e = ++a
+a
+e
+
+ b = 4294967294
+f = b++
+b
+f
+
+
+c = -4294967295
+g = --c 
+c
+g
+
+d = -4294967295
+h = d--
+d
+h

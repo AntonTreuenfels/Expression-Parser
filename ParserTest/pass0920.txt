@@ -1,0 +1,29 @@
+# Parser 9.20 - Pass Tests
+
+# single assigment
+
+a = 9
+a
+a += 1
+a
+a *= 2
+a
+a /= 5
+a
+a -= 3
+
+# multiple assignment
+
+b = a += 1
+a
+b
+
+c = b /= a
+a
+b
+c
+
+c += b *= a *= 2
+a
+b
+c

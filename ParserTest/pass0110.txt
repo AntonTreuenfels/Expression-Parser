@@ -1,0 +1,25 @@
+# Parser 1.10 - Successful Tests
+
+# hexadecimal integers
+
+0x0
+0x1
+0x1b
+0XFF
+0X100
+0X1000
+
+# leading zeros should have no effect
+
+0x00000000
+0x01
+0x001b
+0X000FF
+0X0000100
+0X000001000
+
+# max integer value
+# default 2^32-1
+
+0xfffffffe
+0xFFFFFFFF

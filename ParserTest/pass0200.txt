@@ -1,0 +1,30 @@
+# Parser 2.00 - Successful Tests
+
+# sum decimal integers
+
+1 + 1
+100+100
+1+2+3
+0+23
+54 + 0
+0 + 31 + 0
+
+# leading zeros should have no effect
+
+00000000 + 100
+01 + 099
+0023 + 0077
+000456 + 000544 
+00007890 + 00002110
+
+# sum hexadecimal integers
+
+0x1 + 0xf
+0x01 + 0x00f
+0x10 + 0x0
+0x0 + 0x10 + 0x0
+
+# sum mixed integers
+
+1 + 0x1 + 1 + 0x01 + 01
+0x02 + 2 + 0x2 + 2 + 0x002

@@ -1,0 +1,12 @@
+# Parser 9.00 - Fail Tests
+
+# unrecognized names
+
+000badname
+0xuselessname
+nodecimalpoints.allowed
+
+# division by zero
+
+78 / oops
+zero_value / another_zero_value

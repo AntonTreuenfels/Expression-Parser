@@ -1,0 +1,27 @@
+# Parser 11.00 - Fail Tests
+
+# non-functions
+
+bad(100)
+cruel(0)
+intentions(-100)
+
+55(100)
+&(345)
+123 + /(456)
+
+bad(abs(100))
+abs(bad(234))
+
+# malformed
+
+abs(100
+round(abs(100)
+round abs(100))
+
+# out of range
+
+abs(1e10)
+round(-1e10)
+sign(2e11)
+sqrt(-1)

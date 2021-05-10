@@ -1,0 +1,55 @@
+# Parser 8.10 - Pass Tests
+
+# decimal literals
+
+0.0e0
+.0E0
+
+1e7
+1e+7
+1e-7
+
+4.2e9
+4.2e+9
+4.2e-9
+
+.1e6
+.1e+6
+.1e-6
+
+0.1E6
+0.1E+6
+0.1E-6
+
+.31415926e1
+
+# big float
+# - default max 2^32-1
+
+4.294967294e9 + 100E-2
+
+429.4967295E7 + 0.0
+
+# hexadecimal literals
+
+0x0.0p0
+0x.0P0
+
+0x1p7
+0x1p+7
+0x1p-7
+
+0x4.2P9
+0x4.2P+9
+0x4.2P-9
+
+0x.1p6
+0x.1p+6
+0x.1p-6
+
+0X0.1P6
+0X0.1P+6
+0X0.1P-6
+
+0XF.FFFFFFEP28+0X2p-1
+0xff.ffffffp24 + 0x0p+0

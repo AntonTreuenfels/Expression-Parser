@@ -1,0 +1,29 @@
+# Parser 12.10 - Pass Tests
+
+# some variables
+
+t = 1
+f = 0
+
+# ternary conditional tests
+
+t ? 2 : 3
+f ? 2 : 3
+1+1 ? 2+2 : 3+3
+1-1 ? 2+2 : 3+3
+
+# associate:
+# 1 ? 2 : ( 3 ? 4 : 5 )
+
+t ? 2 : t ? 4 : 5
+t ? 2 : f ? 4 : 5
+f ? 2 : t ? 4 : 5
+f ? 2 : f ? 4 : 5
+
+# associate: parentheses must be explicit
+# 1 ? ( 2 ? 3 : 4 ) : 5
+
+t ? (t ? 3 : 4) : 5
+t ? (f ? 3 : 4) : 5
+f ?( t ? 3 : 4) : 5
+f ? (f ? 3 : 4) : 5

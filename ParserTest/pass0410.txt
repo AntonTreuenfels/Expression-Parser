@@ -1,0 +1,35 @@
+# Parser 4.10 - Successful Tests
+
+# zeroes
+
+0 * 100
+2150 * 0
+0 * 0
+
+# small values
+
+2 * 3
+10 * 10 * 10
+0x10 * 0x10 * 0x10
+
+# near limit values
+
+0xffffffff  * 1
+0x7fffffff * 2
+
+# mixed
+
+0xffffffff * 1 + 0
+0xffffffff * -1 -1
+
+0x80000000 * -2
+0x80000000 * 1 + 0x7fffffff
+0x80000000 * -1 + 0
+0x80000000 + 0x7fffffff * -1
+
+
+
+
+
+
+

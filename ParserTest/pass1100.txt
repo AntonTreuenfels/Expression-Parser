@@ -1,0 +1,41 @@
+# Parser 11.00 - Pass Tests
+
+# single functions
+
+abs(100)
+abs(0)
+abs(-100)
+
+round(-2)
+round(-1.75)
+round(-1.5)
+round(-1.25)
+round(1)
+round(1.25)
+round(1.5)
+round(1.75)
+round(1e7+123.456)
+
+sign(-3.456e5)
+sign(0)
+sign(45.678e7)
+
+sqrt(0)
+sqrt(1)
+sqrt(2)
+sqrt(33)
+sqrt(444)
+sqrt(5555)
+
+# nested
+
+round(sqrt(33))
+round(sqrt(444))
+round(sqrt(5555))
+
+round(sqrt(abs(-33)))
+round(sqrt(abs(-444)))
+round(sqrt(abs(-5555)))
+
+round(sqrt(abs(abc=444)))
+round(sqrt(abs(-abc)))
