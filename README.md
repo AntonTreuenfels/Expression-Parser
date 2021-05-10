@@ -2,7 +2,7 @@
 
 A step-by-step approach to parsing expressions from infix to postfix (Reverse Polish)
 
-This series presents a parser of the kinds of expressions commonly found in computer languages, along with an accompanying evaluator of any successfully parsed expressions. The presentation is in a step by step fashion, starting with this parser which does nothing but echo its input and culminating in one that can handle the ternary conditional operator with both string and numeric operands.
+This series presents a parser of the kinds of expressions commonly found in computer languages, along with an accompanying evaluator of any successfully parsed expressions. The presentation is in a step by step fashion, starting with a parser which does nothing but echo its input and culminating in one that can handle the ternary conditional operator with both string and numeric operands.
 
 This is largely a practical demonstration. There is almost no discussion of theory regarding grammars, Backus Naur Form (BNF), LL(n) versus LR(n) parsers, abstract syntax trees, top-down versus bottom-up parsing, and so on. Instead the emphasis is on making the parser do something, then making it do a little more, and so on, until eventually it meets the goals established for it.
 
