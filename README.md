@@ -8,4 +8,4 @@ This is largely a practical demonstration. There is almost no discussion of theo
 
 What discussion there is focuses mainly on what the current step is supposed to accomplish, what problems are faced, what alternatives might be used to solve them, and why a particular solution was selected. The goal of any particular step is dictated mainly by what I found interesting or wanted to learn more about. The resulting sequence is leisurely and discursive. I will not argue that any of this results in the best possible parser. What is presented here is merely one approach to solving the general problem.
 
-The language used is Python 3.0. The content is provided in Jupyter notebooks, one for each step. There are also pass and fail tests for steps which introduce new capabilities.
+The language used is [Python 3](https://www.python.org/). The content is provided in [Jupyter notebooks](https://jupyter.org/), one for each step. There are also pass and fail tests for steps which introduce new capabilities.
