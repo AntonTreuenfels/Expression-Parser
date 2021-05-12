@@ -1,0 +1,12 @@
+# Parser 11.30 - Pass Tests
+
+# single functions
+
+random()
+a = random()
+
+# nested
+
+round( random() )
+max(random(), random())
+min( abs(-random()), random() - 1.23e-6)

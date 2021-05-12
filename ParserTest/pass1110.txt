@@ -1,0 +1,14 @@
+# Parser 11.10 - Pass Tests
+
+# single functions
+
+max(-1,23)
+min(-1,23)
+
+max(a+1, b+2)
+min(c=3, d=4)
+
+# nested
+
+max( sqrt(0x1.234p16), sqrt(1.234e9) )
+min( abs(-sqrt(37)), sqrt(abs(-1e9)) )

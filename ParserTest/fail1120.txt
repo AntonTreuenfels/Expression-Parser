@@ -1,0 +1,20 @@
+# Parser 11.20 - Fail Tests
+
+# malformed
+
+max(1,2,)
+min(1,2,3
+
+round3.3,2)
+
+# bad arg count
+
+round(1,2,3)
+round(a,b,c)
+
+# bad decimal place count
+
+@ a = 3.1415926
+
+round(a,1.5)
+round(a,a)
