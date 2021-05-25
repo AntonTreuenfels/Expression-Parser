@@ -1,0 +1,25 @@
+# Parser 14.00 - Fail Tests
+
+# malformed
+
+"abc" +
+"abc" + "def" +
+
+# mixed operand types
+
+"ab" + 1
+1 + "ab"
+"ab" + "cd" + 1
+"ab" + 1 + "cd"
+1 + "ab" + "cd"
+
+# unsupported operators
+
++ "abc"
+- "abc"
+"ab" - "bc"
+"ab" * "bc"
+"ab" / "bc"
+"ab" - 1
+ # "ab" * 1
+"ab" / 1

@@ -1,0 +1,53 @@
+# Parser 14.00 - Successful Tests
+
+"a" * 1
+
+"a" * 1.0
+
+"a" * 3
+
+"a" * 3.0
+
+"abc" * 5
+
+"abcd " * 2 * 3
+
+("ab" + "cd") * 4
+
+("\nHello" + ", " + "World!\n" +"Good to see you!") * 2
+
+# relative priorities unchanged
+
+m1 = m2 = 4
+
+"a" + "b " *  4+ "c" + "d " * 4
+
+("a" + "b ") * m1 + ("c" + "d ") * 4
+
+"a" + ("b " * 4 + ("c"+ "d ")) * m2
+
+((("a" + "b ") * m1) + "c") + "d " * m2
+
+# ignore decimal part of floats
+
+m1 = m2 += 0.5
+
+"a" + "b " *  4+ "c" + "d " * 4
+
+("a" + "b ") * m1 + ("c" + "d ") * 4
+
+"a" + ("b " * 4 + ("c"+ "d ")) * m2
+
+((("a" + "b ") * m1) + "c") + "d " * m2
+
+# null string results
+
+"abc" * 0
+
+"abc" * 0.5
+
+"abc" * -1
+
+"abc" * -2.5
+
+"" * 2048

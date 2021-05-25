@@ -1,0 +1,18 @@
+# Parser 13.00 - Fail Tests
+
+# malformed
+
+"Hello, World!
+
+a simple text string"
+
+'That's all, folks!"
+
+"a string containing a " mark"
+
+"two" "strings"
+
+# unbalanced parentheses
+
+("left parenthesis"
+"right parenthesis")

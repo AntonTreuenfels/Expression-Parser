@@ -1,0 +1,15 @@
+# Parser 13.10 - Fail Tests
+
+# escaped terminal quote mark
+
+"an odd number of backslashes won't work\"
+
+"still won't\\\"
+
+# malformed escape
+
+"ending with \
+
+# works but not as expected due to following hexadecimal digits
+
+@ "Comment \xC7a va?"

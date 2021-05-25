@@ -1,0 +1,13 @@
+# Parser 14.00 - Successful Tests
+
+# string concatenation
+
+"ab" + "cd"
+"a" + "b" + "c" + "d"
+
+"ab" + ""
+"ab" + "\t" + "cd"
+
+("ab") + ("cd")
+("ab" + "cd")
+(("ab")+("cd"))

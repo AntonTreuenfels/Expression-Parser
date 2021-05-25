@@ -1,0 +1,12 @@
+# Parser 14.10 - Fail Tests
+
+# malformed
+
+"abc" *
+* "abc"
+
+"abc" * "def"
+
+15 * "abc" 
+
+"abcd" * 13 * "defg"
