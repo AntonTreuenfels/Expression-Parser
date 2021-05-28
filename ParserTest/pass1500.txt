@@ -1,0 +1,26 @@
+# Parser 15.00 - Pass Tests
+
+# string equality
+
+"abc" == "abc"
+"ab" == "cd"
+"a" == ""
+"" == ""
+
+"a" * 3 == "aaa"
+
+# string inequality
+
+"abc" != "abc"
+"ab" != "cd"
+"a" != ""
+"" != ""
+
+"bbb" != "ab" * 2
+
+# string logical negation
+
+!"abc"
+!""
+!!"abc"
+!!""
