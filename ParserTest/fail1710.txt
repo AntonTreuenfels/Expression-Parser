@@ -1,0 +1,32 @@
+# Paser 17.10 - Fail Tests
+
+#  CHR$() function
+
+chr$("")
+chr$(-90)
+
+# FIND() function
+
+find()
+find( "abc" )
+find( "abc", 3 )
+find( 1, 2, 3 )
+find( "abc", "a", "b" )
+
+# LEN() function
+
+len(32)
+len()
+
+# ORD function
+
+ord( 21 )
+ord()
+ord( "abc", 2, 1 )
+ord( "abc", "def" )
+
+# SUB$() function
+
+sub$( "abc", "def" )
+sub$( "abc", 3, 12, -1 )
+sub$( "abc", "def", "ghi" )

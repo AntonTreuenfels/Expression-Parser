@@ -1,0 +1,56 @@
+# Parser 17.10 - Pass Tests
+
+a = 0x41
+
+abc$ = "abc"
+n$ = "abcd "
+h$ = n$ * 5
+
+# CHR$() function
+
+chr$( 0x41 )
+chr$( a )
+
+# FIND() function
+
+find( "b", "abc" )
+find("bc",  abc$,  2 )
+find("ab", abc$, -3 )
+find( "c", "abc", 1000 )
+
+find(n$, h$)
+find(n$, h$, 1)
+find(n$, h$, 3)
+find(n$, h$, -5)
+find(n$, h$, 7, 7+2*len(n$))
+find(n$, h$, 7, 8)
+
+# LEN() function
+
+len( "" )
+len( "abc" )
+len( abc$ )
+len( n$ )
+len( h$ )
+len( n$ + h$)
+
+# ORD() function
+
+ord("")
+ord( "abc" )
+ord( abc$, 2 )
+ord( "abc", -2 )
+ord( abc$, -1000 )
+
+# SUB$() function
+
+sub$( "abc", 2 )
+sub$( abc$, -2 )
+sub$( abc$, -2, 1 )
+sub$( "abc", 3, 0 )
+sub$( abc$, -1000 )
+
+# inverse functions
+
+chr$(ord("A"))
+ord(chr$(0x41))
