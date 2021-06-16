@@ -1,0 +1,27 @@
+# Parser 18.00 - Fail tests
+
+# malformed
+
+"abc" &&
+"abc" ||
+
+&& a$
+|| a$
+
+++a$ && b$
+a$-- || b$
+
+# string ternary conditionals
+
+# mismatched conditional branches
+
+1 ? "true" : 100
+0 ? -50 : "false"
+
+# mismatched assignment
+
+a$ = 1 ? 2 : 3
+a = 1 ? "true" : "false"
+
+b$ = 0 ? "this is fine" : 123
+b = 0 ? 123 : "not so fine"

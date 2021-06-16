@@ -1,0 +1,118 @@
+# Parser 18.00 - String Conditionals
+
+abc$ = "abc"
+def$ = "def"
+ghi$ = "ghi"
+nul$ = ""
+
+# string AND
+
+"abc" && "def"
+"abc" && ""
+"" && "def"
+"" && ""
+"abc" && "def" && "ghi"
+"" && "def" && "ghi"
+
+abc$ && def$
+abc$ && nul$
+nul$ && def$
+nul$ && nul$
+abc$ && def$ && ghi$
+nul$ && def$ && ghi$
+
+"abc" != "" && def$
+abc$ != nul$ && nul$
+nul$ != "" && "def"
+nul$ == "" && "" == ""
+
+abc$ + "def" && ghi$ + ""
+nul$ + "" && "" + nul$
+
+# string OR
+
+"abc" || "def"
+"abc" || ""
+"" || "def"
+"" || ""
+"abc" || "def" || "ghi"
+"" || "def" || "ghi"
+
+"abc" || "def"
+"abc" || ""
+"" || "def"
+"" || ""
+"abc" || "def" || "ghi"
+"" || "def" || "ghi"
+
+abc$ || def$
+abc$ || nul$
+nul$ || def$
+nul$ || nul$
+abc$ || def$ || ghi$
+nul$ || def$ || ghi$
+
+"abc" != "" || def$
+abc$ != nul$ || nul$
+nul$ != "" || "def"
+nul$ == "" || "" == ""
+
+abc$ + "def" || ghi$ + ""
+nul$ + "" || "" + nul$
+
+# bug fixed ?
+
+nul$ == nul$ || 0
+nul$ != nul$ || 0
+
+# mixed types
+
+abc = def = 1
+
+"abc" && 1
+0 && "def"
+
+"abc" || 1
+0 || "def"
+
+abc$ && 1
+0 && def$
+
+abc$ || 1
+0 || def$
+
+# string ternary conditionals
+
+# numeric condition, string result
+
+1 ? "true" : "false"
+0 ? "true" : "false"
+
+t$ = "true"
+f$ = "false"
+
+1 ? t$ : f$
+0 ? t$ : f$
+
+# string condition, string result
+
+nonnull$ = "a non-null string"
+null$ = ""
+
+nonnull$ ? "absolutely " + t$ : "undeniably " + f$
+null$ ? "absolutely " + t$ : "undeniably " + f$
+
+# string condition, numeric result
+
+nonnull$ ? 100 : 200
+null$ ? 100 : 200
+
+# assignment
+
+result$ = nonnull$ ? "absolutely " + t$ : "undeniably " + f$
+
+result$
+
+result$ = null$ ? "absolutely " + t$ : "undeniably " + f$
+
+result$
